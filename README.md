@@ -1,3 +1,5 @@
+#Credit Scoring
+
 ## Introduction
 This project focuses on developing a data modeling approach for a credit dataset to better understand customer loan profiles. We conducted a primary statistical analysis, handled missing values and outliers, and engineered relevant features. Three machine learning models were developed to predict the probability of default: Logistic Regression, Random Forest, and Deep Neural Network.
 
