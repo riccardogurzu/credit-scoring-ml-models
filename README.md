@@ -37,12 +37,3 @@ A deep neural network was implemented but did not outperform the random forest m
 
 ## Conclusion
 The random forest model emerged as the best performer, balancing accuracy and sensitivity effectively. Future work could focus on fine-tuning models and exploring ensemble techniques to enhance predictive performance.
-
-## References
-- Adams, K., & Shin, D. (2022). [The history of credit score algorithms](https://www.marketplace.org/shows/marketplace-tech/the-history-of-credit-score-algorithms-and-how-they-became-the-lender-standard/)
-- CFI Team (2022). [Credit Risk Analysis Models](https://corporatefinanceinstitute.com/resources/commercial-lending/credit-risk-analysis-models/)
-- Jain, J., & Banka, P. (2022). [Dealing with outliers and missing values in a dataset](https://www.neenopal.com/dealing-with-outliers-and-missing-values-in-a-dataset.html)
-- Mongelard, J. (2019). [A brief history in credit risk in banking](https://www.icaew.com/technical/financial-services/financial-services-faculty/fs-focus-magazine/previous-editions-of-fs-focus/fs-focus-2019-issues/november-2019/brief-history-in-credit-risk-in-banking)
-
-## Code
-The complete code for the analysis and model development can be found in the `code` directory of this repository.
