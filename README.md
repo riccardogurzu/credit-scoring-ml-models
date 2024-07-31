@@ -1,14 +1,48 @@
 ## Introduction
-This project involves developing a data model to better understand customer loan profiles using a credit dataset. We conducted primary statistical analysis, handled missing values and outliers, and performed feature engineering.
+This project focuses on developing a data modeling approach for a credit dataset to better understand customer loan profiles. We conducted a primary statistical analysis, handled missing values and outliers, and engineered relevant features. Three machine learning models were developed to predict the probability of default: Logistic Regression, Random Forest, and Deep Neural Network.
+
+## Primary Statistical Analysis
+We began with an exploratory data analysis, summarizing the dataset using descriptive statistics and visualizations. The dataset contained both categorical and numerical variables, with 310,704 observations in the training set and 20,600 in the test set. Key steps included:
+- Identifying missing values and handling them appropriately.
+- Detecting and addressing outliers using statistical and visual methods.
+
+## Data Pre-processing
+### Missing Values
+We addressed missing values by:
+- Assigning "Unemployed" for missing `emp_title`.
+- Using "< 1 year" for missing `emp_length`.
+- Imputing the mean for missing `dti`, `inq_last_6mths`, and `revol_util`.
+
+### Outliers
+Outliers were managed by setting thresholds for numerical variables, and observations exceeding these thresholds were excluded.
+
+### Feature Engineering
+Key steps included:
+- Correlation analysis to understand relationships between variables.
+- Transforming categorical features into numerical values.
+- Creating new features such as employment stability and income-to-loan ratio.
 
 ## Modelling
-We developed three machine learning models to predict the probability of loan default:
-- **Logistic Regression**
-- **Random Forest**
-- **Deep Neural Network**
+### Feature Selection
+Features were selected based on their correlation with the target variable, `risk`. Weakly correlated features and those with high dispersion were dropped.
 
-## Results
-The Random Forest model provided the best performance, offering higher accuracy and better specificity compared to Logistic Regression and Deep Neural Network models.
+### Logistic Regression
+A logistic regression model was developed and evaluated using metrics such as accuracy, sensitivity, and specificity. The ROC curve and AUC score were also computed.
+
+### Random Forest
+A random forest model with 100 trees was developed, showing better performance in terms of accuracy and specificity compared to the logistic regression model.
+
+### Deep Neural Network
+A deep neural network was implemented but did not outperform the random forest model. The lower specificity indicated a higher rate of false positives.
 
 ## Conclusion
-Our findings indicate that the Random Forest model is the most effective for predicting credit defaults, highlighting the importance of model selection in credit risk assessment.
+The random forest model emerged as the best performer, balancing accuracy and sensitivity effectively. Future work could focus on fine-tuning models and exploring ensemble techniques to enhance predictive performance.
+
+## References
+- Adams, K., & Shin, D. (2022). [The history of credit score algorithms](https://www.marketplace.org/shows/marketplace-tech/the-history-of-credit-score-algorithms-and-how-they-became-the-lender-standard/)
+- CFI Team (2022). [Credit Risk Analysis Models](https://corporatefinanceinstitute.com/resources/commercial-lending/credit-risk-analysis-models/)
+- Jain, J., & Banka, P. (2022). [Dealing with outliers and missing values in a dataset](https://www.neenopal.com/dealing-with-outliers-and-missing-values-in-a-dataset.html)
+- Mongelard, J. (2019). [A brief history in credit risk in banking](https://www.icaew.com/technical/financial-services/financial-services-faculty/fs-focus-magazine/previous-editions-of-fs-focus/fs-focus-2019-issues/november-2019/brief-history-in-credit-risk-in-banking)
+
+## Code
+The complete code for the analysis and model development can be found in the `code` directory of this repository.
